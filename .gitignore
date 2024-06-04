@@ -1,0 +1,8 @@
+# Build files.
+/Debug/
+/Release/
+/x64/
+/x86/
+
+# Visual studio files.
+/.vs/

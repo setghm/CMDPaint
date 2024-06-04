@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{17d7afd2-e24a-41e0-997d-57f0c6c877dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\controls">
+      <UniqueIdentifier>{6051ca67-3ced-4874-be97-ca0c34fac19a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\input">
+      <UniqueIdentifier>{c0066127-051a-4f39-b455-c03dcee2c236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{c587701d-cfc0-46e2-90cb-4c244e807fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components">
+      <UniqueIdentifier>{55cb9e3e-d991-4fe9-b776-0ecc32116c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\canvas">
+      <UniqueIdentifier>{06641bfe-6d9b-4f1a-b1a4-eb50fd897981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\user_interface">
+      <UniqueIdentifier>{684fc41e-36f4-41b0-97de-1e0e1a167144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\helpers">
+      <UniqueIdentifier>{d3004c14-4c3f-4a8c-9974-4de2dbfee67e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\file_manager">
+      <UniqueIdentifier>{fe9dac4c-92d2-43f8-8558-0f00626ba3d2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Element.hpp">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Edit.h">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="input.hpp">
+      <Filter>core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.hpp">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core.hpp">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.hpp">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="components.hpp">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="Canvas.h">
+      <Filter>components\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="controls.h">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>components\user_interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Divider.h">
+      <Filter>core\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentTypes.hpp">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentsHelpers.hpp">
+      <Filter>components\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="CanvasActions.h">
+      <Filter>components\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>components\file_manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Label.cpp">
+      <Filter>core\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>core\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Edit.cpp">
+      <Filter>core\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="Canvas.cpp">
+      <Filter>components\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="UserInterface.cpp">
+      <Filter>components\user_interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Divider.cpp">
+      <Filter>core\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentsHelpers.cpp">
+      <Filter>components\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="CanvasActions.cpp">
+      <Filter>components\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>components\file_manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
