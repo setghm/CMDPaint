@@ -1,9 +1,0 @@
-#include "app.h"
-
-typedef char * String;
-
-int main(int argc, String argv[]) {
-	
-	
-	return EXIT_SUCCESS;
-}
