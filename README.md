@@ -29,14 +29,24 @@ The format is as follows:
 
 - The first 32 bits are used to store the width of the image (unsigned integer).
 - The next 32 bits are used to store the height of the image (unsigned integer).
-- All other bytes are Windows console colors encoded in 4 bits (1 nibble) each.
+- All other bytes are Windows console colors.
 
 > [!NOTE]
 > The width and height refer to the **size in characters**, not in pixels.
+
+### Composition of colors
+
+Each byte of the color array is made up of 2 parts:
+- Background color: first 4 bits, the desired color.
+- Foreground color: next 4 bits, visible color (either black or white) over the background color.
+
+This way of color coding is very useful to **simply print blank spaces** and be able to get the image in the Windows command prompt.
+
+This way we also avoid having to configure the application in unicode or set the page code to print the unicode block character "█" (0x2588) on the command line.
 
 ### File structure
 
 The file structure is as follows:
 
-![ByteColor file format](https://github.com/user-attachments/assets/aa910f8a-37a9-4320-b52b-9fc7621da9c0)
+![ByteColor file format](https://github.com/user-attachments/assets/2b6b9c33-dc1b-4754-9b7f-a136b340b3c3)
 
