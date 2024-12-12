@@ -3,15 +3,13 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-# Habilite Recarga activa para los compiladores de MSVC si se admiten.
+# Enable Hot Reloading for MSVC compilers if supported.
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
 project ("CMDPaint")
-
-include_directories("src/")
 
 list(APPEND SOURCE_FILES
 	"src/main.cpp"
@@ -52,8 +50,16 @@ list(APPEND SOURCE_FILES
 
 add_executable (CMDPaint ${SOURCE_FILES})
 
+target_include_directories(CMDPaint PRIVATE "src/")
+
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMDPaint PROPERTY CXX_STANDARD 20)
 endif()
 
-# TODO: Agregue pruebas y destinos de instalación si es necesario.
+# Build examples (change to NO to skip this).
+
+set(BUILD_EXAMPLES YES)
+
+if (${BUILD_EXAMPLES})
+	add_subdirectory("examples/cpp")
+endif()
