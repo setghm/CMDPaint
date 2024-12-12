@@ -32,6 +32,8 @@ ByteColorImage* ByteColorImage::fromFile(std::string filename) {
 			throw std::runtime_error("Failed to read image color data.");
 		}
 		
+		file.close();
+
 		return image;
 	}
 	catch (const std::exception& e) {
