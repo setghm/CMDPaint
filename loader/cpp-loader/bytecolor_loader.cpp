@@ -27,6 +27,10 @@ ByteColorImage* ByteColorImage::fromFile(std::string filename) {
 			std::istream_iterator<unsigned char>(file),
 			std::istream_iterator<unsigned char>()
 		);
+
+		if (file.fail()) {
+			throw std::runtime_error("Failed to read image color data.");
+		}
 		
 		return image;
 	}
