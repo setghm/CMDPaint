@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cinttypes>
 #include <vector>
 
 using pixels_t = std::vector<std::vector<uint8_t>>;

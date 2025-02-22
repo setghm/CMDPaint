@@ -1,5 +1,4 @@
 #include "FileManager.hpp"
-#include <iostream>
 #include <fstream>
 #include <app/Configuration.hpp>
 #include <core/core.hpp>
@@ -73,6 +72,9 @@ bool FileManager::open(std::wstring filepath) {
 	canvas->actionsForget();
 	canvas->resize(width, height);
 	canvas->setPixels(pixels);
+
+	// Update the display size in the UI.
+	onFileOpened(width, height);
 
 	file.close();
 

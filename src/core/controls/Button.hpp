@@ -30,7 +30,7 @@ public:
 	void draw(void) override;
 
 	// Setters.
-	void setColor(uint8_t value) {
+	void setColor(uint8_t value) override {
 		color = value;
 		active_color = (getFrontColor() << 4) | (getBackColor() >> 4);
 	}

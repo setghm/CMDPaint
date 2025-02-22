@@ -16,6 +16,9 @@ private:
 	// Front and back colors labels.
 	Label* label_front_color;
 	Label* label_back_color;
+	// Size edit controls.
+	Edit* edit_width;
+	Edit* edit_height;
 
 	// Hightlight selected tool button and unhighlight the rest.
 	void highlightToolButton(Button* button);
@@ -41,6 +44,7 @@ public:
 	void whenRedo(bool end_reached);
 	void whenActionRecorded(void);
 	void whenActionsForget(void);
+	void whenFileOpened(int width, int height);
 
 	// Life cycle methods.
 	void input(const InputEvent& event) override;

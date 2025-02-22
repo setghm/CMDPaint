@@ -84,6 +84,9 @@ App::App() {
 	canvas->setOnChangesMade([=](void) {
 		fileManager->whenChangesMade();
 	});
+	fileManager->setOnFileOpened([=](int width, int height) {
+		ui->whenFileOpened(width, height);
+	});
 
 	running = true;
 }

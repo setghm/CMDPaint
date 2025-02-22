@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <string>
 #include <cinttypes>
+#include <cmath>
 #include <app/Configuration.hpp>
 
 #define NEW(type, name) \

@@ -56,6 +56,6 @@ public:
 	// Setters.
 	void setBackColor(uint8_t value) { color = value & 0xF0 | color & 0x0F; }
 	void setFrontColor(uint8_t value) { color = value & 0x0F | color & 0xF0; }
-	void setColor(uint8_t value) { color = value; }
+	virtual void setColor(uint8_t value) { color = value; }
 };
 

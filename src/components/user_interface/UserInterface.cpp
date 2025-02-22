@@ -78,9 +78,9 @@ UserInterface::UserInterface(
 	// Resize section.
 	Label* label_resize = new Label(Configuration::uiStartX + 1, 29, L"Image Size", 0x8F);
 	Label* label_size_x = new Label(Configuration::uiStartX + 1, 31, L"SizeX:", 0x8F);
-	Edit* edit_width = new Edit(Configuration::uiStartX + 7, 31, 7, 3);
+	edit_width = new Edit(Configuration::uiStartX + 7, 31, 7, 3);
 	Label* label_size_y = new Label(Configuration::uiStartX + 1, 32, L"SizeY:", 0x8F);
-	Edit* edit_height = new Edit(Configuration::uiStartX + 7, 32, 7, 3);
+	edit_height = new Edit(Configuration::uiStartX + 7, 32, 7, 3);
 	Button* button_resize = new Button(Configuration::uiStartX + 1, 34, L"Apply", 0xF0, 10);
 
 	// Add all the child controls.
@@ -269,5 +269,10 @@ void UserInterface::whenActionsForget(void) {
 
 	button_tool_redo->setColor(0x87);
 	button_tool_redo->setEnabled(false);
+}
+
+void UserInterface::whenFileOpened(int width, int height) {
+	edit_width->setValue(std::to_wstring(width));
+	edit_height->setValue(std::to_wstring(height));
 }
 
