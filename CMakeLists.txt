@@ -46,6 +46,9 @@ list(APPEND SOURCE_FILES
 	"src/components/helpers/ComponentHelpers.hpp"
 	"src/components/user_interface/UserInterface.cpp"
 	"src/components/user_interface/UserInterface.hpp"
+
+	# Resources
+	"res/resource.rc"
 )
 
 add_executable (CMDPaint ${SOURCE_FILES})
